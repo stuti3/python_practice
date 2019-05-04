@@ -50,3 +50,20 @@ message.
 Then change the value of your variable to a new message, and print the new
 message
 ```
+
+### Strings
+
+A string is a data type that is just a set of characters. In Python, we define Strings as follows:
+```
+'Why does khudkhushi in hindi mean suicide instead of masturbation?'
+"Why does khudkhushi in hindi mean suicide instead of masturbation?"
+```
+Python offers flexibility too, with strings and apostrophe:
+```
+'My friends pay restaurant bills on a "de-tu-de" basis.'
+"My friends pay restaurant bills on a 'de-tu-de' basis."
+```
+![String Joke](https://cdn-images-1.medium.com/max/1600/1*CtIdTEzKtQo-9Bc9ljArEA.png)
+
+Just off topic yet so much topic:
+![Python Joke](https://img.devrant.com/devrant/rant/r_1755638_zkSNA.jpg)
