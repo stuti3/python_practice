@@ -67,3 +67,39 @@ Python offers flexibility too, with strings and apostrophe:
 
 Just off topic yet so much topic:
 ![Python Joke](https://img.devrant.com/devrant/rant/r_1755638_zkSNA.jpg)
+
+Strings can be used in many ways. Here are some of them:
+
+#### Changing cases with methods in a string
+
+Let us try one thing. Open a file, name it *name.py* and type this in it:
+```
+name = "bebe rexha"
+print(name.title())
+```
+Save this file and run it. You will get the following output:
+```
+Bebe Rexha
+```
+In this example, the lowercase string "bebe rexha" is stored in the variable name. The method title() appears after the variable in the print() statement. A method is an action that Python can perform on a piece of data. The
+dot (.) after name in name.title() tells Python to make the title() method
+act on the variable name. Every method is followed by a set of parentheses,
+because methods often need additional information to do their work.
+That information is provided inside the parentheses. The title() function
+doesn’t need any additional information, so its parentheses are empty.
+title() displays each word in titlecase, where each word begins with a
+capital letter. This is useful because you’ll often want to think of a name as a
+piece of information. For example, you might want your program to recognize the input values Bebe, BEBE, and bebe as the same name, and display all of
+them as Bebe.
+
+There are other useful string methods in python that deal with cases. For example:
+```
+name = "bebe rexha"
+print(name.upper())
+print(name.lower())
+```
+This will give this output:
+```
+BEBE REXHA
+bebe rexha
+```
