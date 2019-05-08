@@ -103,3 +103,159 @@ This will give this output:
 BEBE REXHA
 bebe rexha
 ```
+
+#### Combining or concatenating strings
+There are times when we need to concatenate/combine strings. In python, it is very easy. For example:
+```
+first_name = "Bebe"
+second_name = "Rexha"
+full_name = first_name + " " + second_name
+print(full_name)
+```
+The output to this code will be:
+```
+Bebe Rexha
+```
+So, as we can see, Python uses **+** to concatenate strings. The method of combining strings is called *concatenation*. 
+
+Concatenation is useful, for instance, we can make full messages for it. For example:
+```
+first_name = "Bebe"
+second_name = "Rexha"
+full_name = first_name + " " + second_name
+message = "Hey " + full_name.title() + "!"
+print(message)
+```
+This will print:
+```
+Hey Bebe Rexha!
+```
+Note that we used title() so that the name is formatted appropriately. But just to see if anything happens, use the same code without the title() method.
+
+#### Adding Whitespace to Strings with tabs or newlines
+In programming, whitespace refers to any nonprinting character, such as
+spaces, tabs, and end-of-line symbols. You can use whitespace to organize
+your output so it’s easier for users to read.
+
+To add a tab to your text, use the character combination \t:
+```
+print("Python")
+print("\tPython")
+```
+which will print:
+```
+Python
+  Python
+```
+Similarly, for newline, we use \n.
+
+#### Stripping whitespace
+
+Extra whitespace can be confusing in your programs. To programmers
+'python' and 'python ' look pretty much the same. But to a program, they
+are two different strings. Python detects the extra space in 'python ' and
+considers it significant unless you tell it otherwise.
+It’s important to think about whitespace, because often you’ll want to
+compare two strings to determine whether they are the same. For example,
+one important instance might involve checking people’s usernames when
+they log in to a website. Extra whitespace can be confusing in much simpler
+situations as well. Fortunately, Python makes it easy to eliminate extraneous
+whitespace from data that people enter.
+Python can look for extra whitespace on the right and left sides of a
+string. To ensure that no whitespace exists at the right end of a string, use
+the rstrip() method.
+```
+fav = 'Me '
+print(fav)
+print(fav.rstrip())
+```
+The output will be:
+```
+'Me '
+'Me'
+```
+You can also strip whitespace from the left side of a string using the
+lstrip() method or strip whitespace from both sides at once using strip():
+```
+fav = ' Me '
+print(fav)
+print(fav.rstrip())
+print(fav.lstrip())
+print(fav.strip())
+```
+This will output:
+```
+' Me '
+' Me'
+'Me '
+'Me'
+```
+
+![Python Joke](https://i.pinimg.com/originals/11/b4/20/11b420fbf1595be3056ad6355277933c.jpg)
+
+#### Avoiding Syntax Errors with Strings
+One kind of error that you might see with some regularity is a syntax error.
+A syntax error occurs when Python doesn’t recognize a section of your program as valid Python code. For example, if you use an apostrophe within
+single quotes, you’ll produce an error. This happens because Python interprets everything between the first single quote and the apostrophe as a
+string. It then tries to interpret the rest of the text as Python code, which
+causes errors.
+
+Here’s how to use single and double quotes correctly.
+Here’s how to use single and double quotes correctly. Save this program
+as apostrophe.py and then run it:
+```
+message = "One of Python's strengths is its diverse community."
+print(message)
+```
+The apostrophe appears inside a set of double quotes, so the Python
+interpreter has no trouble reading the string correctly:
+```
+One of Python's strengths is its diverse community.
+```
+However, if you use single quotes, Python can’t identify where the string
+should end:
+```
+message = 'One of Python's strengths is its diverse community.'
+print(message)
+```
+You’ll see the following output:
+```
+File "apostrophe.py", line 1
+ message = 'One of Python's strengths is its diverse community.'
+ ^u
+SyntaxError: invalid syntax 
+```
+In the output you can see that the error occurs at u right after the
+second single quote. This syntax error indicates that the interpreter doesn’t
+recognize something in the code as valid Python code. Errors can come
+from a variety of sources, and I’ll point out some common ones as they arise.
+You might see syntax errors often as you learn to write proper Python code.
+Syntax errors are also the least specific kind of error, so they can be difficult
+and frustrating to identify and correct. 
+
+**Your editor’s syntax highlighting feature should help you spot some syntax errors
+quickly as you write your programs. If you see Python code highlighted as if it’s
+English or English highlighted as if it’s Python code, you probably have a mismatched quotation mark somewhere in your file.**
+
+```
+Try It Yourself
+Save each of the following exercises as a separate file with a name like
+name_cases.py. If you get stuck, take a break or see the suggestions in
+Appendix C.
+2-3. Personal Message: Store a person’s name in a variable, and print a message to that person. Your message should be simple, such as, “Hello Eric,
+would you like to learn some Python today?”
+2-4. Name Cases: Store a person’s name in a variable, and then print that person’s name in lowercase, uppercase, and titlecase.
+2-5. Famous Quote: Find a quote from a famous person you admire. Print the
+quote and the name of its author. Your output should look something like the
+following, including the quotation marks:
+Albert Einstein once said, “A person who never made a
+mistake never tried anything new.”
+2-6. Famous Quote 2: Repeat Exercise 2-5, but this time store the famous person’s name in a variable called famous_person. Then compose your message
+and store it in a new variable called message. Print your message.
+2-7. Stripping Names: Store a person’s name, and include some whitespace
+characters at the beginning and end of the name. Make sure you use each
+character combination, "\t" and "\n", at least once.
+Print the name once, so the whitespace around the name is displayed.
+Then print the name using each of the three stripping functions, lstrip(),
+rstrip(), and strip().
+```
