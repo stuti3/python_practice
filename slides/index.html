@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section><h1>Introducing Lists</h1></section>
+				<section>This slide will include:
+					<p class="fragment fade-up yellow">1. What is a list?</p>
+					<p class="fragment fade-up yellow">2. Changing, adding and removing elements from a list</p>
+					<p class="fragment fade-up yellow">3. Organizing a list</p>
+					<p class="fragment fade-up yellow">4. Avoiding index errors when working with a list</p>
+				</section>
+				<section>
+					<section>What is a list?</section>
+					<section>
+						<p class="fragment fade-up">Let us imagine a scenario: </p>
+						<p class="fragment fade-in" style="color: rgba(255, 255, 66, 0.6);">You are organizing an occasion and you have invited all your friends, relatives etc. There are a lot of tasks in hand, from decorations to food preparation to buying necessary items to budgeting etc. You have to handle the event and since there is so much to do and so little time, you are a bit flustered. What do you do?</p>
+						<p class="fragment fade-in" style="color: yellow;">You make a list of tasks which helps you handle the event properly and so that everything runs smoothly.</p> </section>
+					<section>In programming, lists play a similar role. When we have so much data to take care of, we store them in lists so that it can be handled properly. And for Python, Lists are
+one of Python’s most powerful features readily accessible to new programmers, and they tie together many
+important concepts in programming. We will see the same in the upcoming slides.</section>
+				</section>
+				<section>So what is a list? A list is a collection of items in a particular order. You can make a list that
+includes the letters of the alphabet, the digits from 0–9, or the names of
+all the people in your family. You can put anything you want into a list, and 
+the items in your list don’t have to be related in any particular way. Because
+a list usually contains more than one element, it’s a good idea to make the
+name of your list plural, such as letters, digits, or names. </section>
+<section>To initialize a list in Python, we use square brackets, like this:
+<pre><code data-trim data-noescape>
+	members = ['RM', 'Suga', 'JHope', 'Jungkook', 'Jin', 'V', 'Jimin']
+	print(members)
+</code></pre></section>
+<section>
+	<section>Accessing elements in a list</section>
+	<section>Lists are ordered collections, so you can access any element in a list by
+telling Python the position, or index, of the item desired.</section>
+	<section>To access an element in a list, write the name of the list followed by the index of the item
+enclosed in square brackets.
+	<pre>
+		<code data-trim data-noescape>
+			btsmem = members[1]
+			print(btsmem)
+		</code>
+	</pre></section>
+	<section>Let us go back a bit. Can you format the list element too, when it gives an output, like a proper string?</section>
+</section>
+<section>
+	<section>Reminder: Index positions start at 0, not 1</section>
+	<section>In Python, you can access the last element by using -1. Try this:
+		<pre>
+			<code data-trim data-noescape>
+				print(members[-1])
+			</code>
+		</pre>	
+	</section>
+	<section>Wait wait! It does not end here. Python extends to other negative values as well. Try:
+		<pre>
+			<code data-trim data-noescape>
+				print(members[-3])
+				print(members[-4])
+			</code>
+		</pre>
+	</section>
+</section>
+<section>
+	<section>Using individual values from a list</section>
+	<section>So now that we know how to get each values from a list, we can use those values individually as well.
+	<section>For example, see this code:
+		<pre>
+			<code data-trim data-noescape>
+				statement = members[1].title() + " was born in Daegu Town."
+				print(statement)
+			</code>
+		</pre>
+	</section>	
+	</section>
+</section>
+<section>
+	<section>Try It Yourself!</section>
+	<section>Try these short programs to get some firsthand experience with Python’s lists</section>
+	<section> <b>Names</b>: Store the names of a few of your friends in a list called names. Print
+each person’s name by accessing each element in the list, one at a time.</section>
+	<section> <b>Greetings</b>: Start with the list you used in the previous exercise, but instead of just
+printing each person’s name, print a message to them. The text of each message should be the same, but each message should be personalized with the
+person’s name</section>
+	<section> <b>Your Own List</b>: Think of your favorite mode of transportation, such as a
+motorcycle or a car, and make a list that stores several examples. Use your list
+to print a series of statements about these items, such as “I would like to own a
+Honda motorcycle.”</section>
+</section>
+<section>
+	<section>Changing, adding and removing elements</section>
+	<section>Most lists you create will be dynamic, meaning you’ll build a list and
+then add and remove elements from it as your program runs its course. For
+example, you might create a game in which a player has to shoot aliens out
+of the sky. You could store the initial set of aliens in a list and then remove
+an alien from the list each time one is shot down. Each time a new alien
+appears on the screen, you add it to the list. Your list of aliens will decrease
+and increase in length throughout the course of the game. </section>
+	<section>Shhh! Let me tell you a secret. We are gonna make such a game soon!</section>
+</section>
+<section>
+	<section>Modifying Elements in a list</section>
+	<section>Sometimes, we might feel the need to modifying some item's value. To change an element, use the name of the list followed
+by the index of the element you want to change, and then provide the new
+value you want that item to have.
+	<pre>
+		<code data-trim data-noescape>
+			haircolors = ['silver','black', 'red', 'blue', 'purple']
+			print(haircolors)
+
+			haircolors[1] = 'brown'
+			print(haircolors)
+
+			//I cannot fathom BTS without anyone of the seven members, so I am not modifying that list.
+		</code>
+	</pre></section>
+</section>
+<section>
+	<section>Adding elements to a list</section>
+	<section>You might want to add a new element to a list for many reasons. Python provides several ways to add new data to existing lists.</section>
+	<section>To append elements to the end of the list:
+		<pre>
+			<code data-trim data-noescape>
+				haircolors = ['silver','black', 'red', 'blue', 'purple']
+				print(haircolors)
+
+				haircolors.append('brown')
+				print(haircolors)
+			</code>
+		</pre>
+	</section>
+	<section>The append() function also makes it easier to build a list dynamically. For example:</section>
+	<section>
+		<pre>
+			<code data-trim data-noescape>
+				members = []
+
+				members.append('RM')
+				members.append('Suga')
+				members.append('JHope')
+				members.append('Jungkook')
+				members.append('Jin')
+				members.append('V')
+				members.append('Jimin')
+
+				print(members)
+
+				//append() just became Bang Si Hyuk.
+			</code>
+		</pre>
+	</section>
+	<section>Building lists this way is very common, because you often won’t know
+the data your users want to store in a program until after the program is
+running. To put your users in control, start by defining an empty list that
+will hold the users’ values. Then append each new value provided to the list
+you just created.</section>
+</section>
+<section>
+	<section>Inserting elements into a list</section>
+	<section>You can add a new element at any position in your list by using the insert()
+method
+	<pre>
+		<code data-trim data-noescape>
+			haircolors = ['black', 'brown', 'blue', 'red']
+
+			haircolors.insert(0, 'silver')
+			haircolors.insert(3, 'purple')
+
+			print(haircolors)
+		</code>
+	</pre>
+	</section>
+</section>
+<section>
+	<section>Removing items from a list</section>
+	<section>You can remove an
+item according to its position in the list or according to its value.</section>
+	<section>
+		Removing using del statement:
+		<pre>
+			<code data-trim data-noescape>
+				del haircolors[1]
+				print(haircolors)
+			</code>
+		</pre>
+	</section>
+	<section>
+		Removing using pop command:
+	</section>
+	<section>The pop() method removes the last item in a list, but it lets you work
+with that item after removing it. The term pop comes from thinking of a
+list as a stack of items and popping one item off the top of the stack. In
+this analogy, the top of a stack corresponds to the end of a list.</section>
+<section>
+	<pre>
+		<code data-trim data-noescape>
+			popped_color = haircolors.pop()
+			print(haircolors)
+			print(popper_color)
+		</code>
+	</pre>
+</section>
+<section>Can you give an example of how pop can be useful while coding any real life scenario?</section>
+<section>Removing items by value:</section>
+<section>Sometimes you won’t know the position of the value you want to remove
+from a list. If you only know the value of the item you want to remove, you
+can use the remove() method.
+<pre>
+	<code data-trim data-noescape>
+		haircolors.remove('brown')
+		print(haircolors)
+	</code>
+</pre>
+</section>
+<section><b>NOTE</b> : The remove() method deletes only the first occurrence of the value you specify. If there’s
+a possibility the value appears more than once in the list, you’ll need to use a loop to
+determine if all occurrences of the value have been removed.</section>
+</section>
+<section>
+	<section>Try It Yourself</section>
+	<section>These are some more complex problems, but you will have fun:</section>
+	<section> <b>Guest List</b>: If you could invite anyone, living or deceased, to dinner, who
+would you invite? Make a list that includes at least three people you’d like to
+invite to dinner. Then use your list to print a message to each person, inviting
+them to dinner</section>
+<section><b>Changing Guest List:</b> You just heard that one of your guests can’t make the
+dinner, so you need to send out a new set of invitations. You’ll have to think of
+someone else to invite.
+•	 Start with your program from the above. Add a print statement at the
+end of your program stating the name of the guest who can’t make it.
+•	 Modify your list, replacing the name of the guest who can’t make it with
+the name of the new person you are inviting.
+•	 Print a second set of invitation messages, one for each person who is still
+in your list.</section>
+<section><b>More Guests</b>: You just found a bigger dinner table, so now more space is
+available. Think of three more guests to invite to dinner.
+•	 Start with your program from Exercise 3-4 or Exercise 3-5. Add a print
+statement to the end of your program informing people that you found a
+bigger dinner table.
+•	 Use insert() to add one new guest to the beginning of your list.
+•	 Use insert() to add one new guest to the middle of your list.
+•	 Use append() to add one new guest to the end of your list.
+•	 Print a new set of invitation messages, one for each person in your list.</section>
+<section><b>Shrinking Guest List</b>: You just found out that your new dinner table won’t
+arrive in time for the dinner, and you have space for only two guests.
+•	 Start with your program from above. Add a new line that prints a
+message saying that you can invite only two people for dinner.
+•	 Use pop() to remove guests from your list one at a time until only two
+names remain in your list. Each time you pop a name from your list, print
+a message to that person letting them know you’re sorry you can’t invite
+them to dinner.
+•	 Print a message to each of the two people still on your list, letting them
+know they’re still invited.
+•	 Use del to remove the last two names from your list, so you have an empty
+list. Print your list to make sure you actually have an empty list at the end
+of your program</section>
+</section>
+<section>
+	<section>Organizing a list</section>
+	<section>Often, your lists will be created in an unpredictable order, because you can’t
+always control the order in which your users provide their data. Although
+this is unavoidable in most circumstances, you’ll frequently want to present
+your information in a particular order. Sometimes you’ll want to preserve the
+original order of your list, and other times you’ll want to change the original order. Python provides a number of different ways to organize your lists,
+depending on the situation.</section></section>
+<section>Sorting list with a sorting method</section>
+<section>
+	<section>Python’s sort() method makes it relatively easy to sort a list.
+	<pre>
+		<code data-trim data-noescape>
+			print(haircolors)
+			haircolors.sort()
+			print(haircolors)
+		</code>
+	</pre></section>
+	<section>
+		If you want it to sort reverse:
+		<pre>
+			<code data-trim data-noescape>
+				haircolors.sort(reverse=True)
+				print(haircolors)
+			</code>
+		</pre>
+	</section>
+	<section>Do note that sort() sorts the list <strong>permanently.</strong> There is another function that sorts the list temporarily.</section>
+	<section>Sorting a List Temporarily with the sorted() Function</section>
+	<section>
+		To maintain the original order of a list but present it in a sorted order, you
+can use the sorted() function. The sorted() function lets you display your list
+in a particular order but doesn’t affect the actual order of the list.
+	<pre>
+		<code data-trim data-noescape>
+			print(haircolors)
+			print(haircolors.sorted())
+			print(haircolors)
+		</code>
+	</pre>
+	</section>
+	<section>Notice that the list still exists in its original order at x after the sorted()
+function has been used. The sorted() function can also accept a reverse=True
+argument if you want to display a list in reverse alphabetical order</section>
+<section>NOTE: Sorting a list alphabetically is a bit more complicated when all the values are not in
+lowercase. There are several ways to interpret capital letters when you’re deciding on
+a sort order, and specifying the exact order can be more complex than we want to deal
+with at this time. However, most approaches to sorting will build directly on what you
+learned in this section</section>
+</section>
+
+
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
